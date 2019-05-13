@@ -13,7 +13,7 @@ class Song
   end
 
    def self.all
-    @@all 
+    @@all
   end
 
    def self.destroy_all
@@ -51,7 +51,7 @@ class Song
     artist = Artist.find_or_create_by_name(title[0])
     genre = Genre.find_or_create_by_name(title[2][0..-5])
     create(title[1], artist, genre)
-  end 
+  end
 
    def self.create_from_filename(filename)
     new_from_filename(filename)
